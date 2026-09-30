@@ -31,16 +31,16 @@ task 1.1 (типы термов с числами и булями)
 -- сверяясь с интерпретатором (`make repl`, команда `:type`). Формат: `type t = Int -> Int`.
 
 t1_1a := \x. x + 1
-type t1_1a = ...
+type t1_1a = Int -> Int
 
 t1_1b := \b. if b 0 1
-type t1_1b = ...
+type t1_1b = Bool -> Int
 
 t1_1c := \f x. if (f x) x (x + 1)
-type t1_1c = ...
+type t1_1c = (Int -> Bool) -> Int -> Int
 
 t1_1d := true + 1
-type t1_1d = ...
+type t1_1d = none
 
 
 task 1.2 (наиболее общий тип: буквы и константы)
